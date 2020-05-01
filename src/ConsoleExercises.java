@@ -32,8 +32,8 @@ public class ConsoleExercises {
         String width = newScan.nextLine();
         System.out.print("Length: \n");
         String length = newScan.nextLine();
-        int area = (Integer.parseInt(width) * 2) + (Integer.parseInt(length) * 2);
-        System.out.printf("Area: %d%n", area);
+        double area = (Float.parseFloat(width) * 2) + (Float.parseFloat(length) * 2);
+        System.out.printf("Area: %f%n", area);
 
 
 
