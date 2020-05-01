@@ -11,15 +11,26 @@ public class ConsoleExercises {
         int wholeNumber = scanner.nextInt();
         System.out.printf("The value of number being enter in the terminal is: %d%n", wholeNumber);
 
-        Scanner scanThreeWords = new Scanner(System.in);
-        System.out.print("Line 1: ");
-        String word1 = scanThreeWords.nextLine();
-        System.out.print("Line 2: ");
-        String word2 = scanThreeWords.nextLine();
-        System.out.print("Line 3: ");
-        String word3 = scanThreeWords.nextLine();
+        Scanner newScan = new Scanner(System.in);
+        System.out.printf("Line 1: %n");
+        String word1 = newScan.nextLine();
+        System.out.printf("Line 2: %n");
+        String word2 = newScan.nextLine();
+        System.out.printf("Line 3: %n");
+        String word3 = newScan.nextLine();
 
         System.out.printf("%s%n%s%n%s%n", word1, word2, word3);
+        System.out.printf("==============%n");
+
+        System.out.printf("Enter a sentence: %n");
+        String sentence = newScan.nextLine();
+        System.out.printf("Sentence: %s%n", sentence);
+
+
+
+
+
+
 
 
 
