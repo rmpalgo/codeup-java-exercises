@@ -29,11 +29,10 @@ public class ConsoleExercises {
         // Calculate the perimeter and area of Codeup's classrooms
 
         System.out.print("Width: \n");
-        int width = newScan.nextInt();
+        String width = newScan.nextLine();
         System.out.print("Length: \n");
-        int length = newScan.nextInt();
-        int area = (width * 2) + (length * 2);
-        System.out.printf("Width: %d%nLength: %d%n", width, length);
+        String length = newScan.nextLine();
+        int area = (Integer.parseInt(width) * 2) + (Integer.parseInt(length) * 2);
         System.out.printf("Area: %d%n", area);
 
 
