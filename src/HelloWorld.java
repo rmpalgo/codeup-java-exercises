@@ -17,11 +17,25 @@ public class HelloWorld {
        /* myString = 3.1459;  This produces an error*/
 
 //  Step 5: Declare a long variable named myNumber, but do not assign anything to it. Next print out myNumber.
-         long myNumber = 123L;
+         float myNumber = (float) 3.14;
         System.out.println(myNumber);
         // Causes an error, variable myNumber might not be initialized.
+
+        // Step 6, 7, 8: Change you code to assign the value 3.14 to myNumber.
+        /* sends and error stating incompatible types, 3.14 is non-integer value and requires double for initializing type */
+
+        //Step 9: casting and changing to double
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+
+        /* x++ is executing code or adding the 1, and then logging the x again will show the added 1 resulting in x = 6; */
+
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
+        // this assigns the +1 and added it immediately
+
     }
 
-    // Step 6, 7, 8: Change you code to assign the value 3.14 to myNumber.
-        /* sends and error stating incompatible types, 3.14 is non-integer value and requires double for initializing type */
 }
