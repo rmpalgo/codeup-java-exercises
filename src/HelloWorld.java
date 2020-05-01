@@ -47,10 +47,10 @@ public class HelloWorld {
 //        x++;
 //        System.out.println(x);
 
-//        int x = 3;
-//        int y = 4;
-//        y *= x;
-//        System.out.println(y);
+        int x = 3;
+        int y = 4;
+        y *= x;
+        System.out.println(y);
 
 //    int x = 10;
 //    int y = 2;
@@ -59,9 +59,10 @@ public class HelloWorld {
 // y -= x;
 // System.out.println(y);
 // Error message: lossy conversion type not compatible
-       byte x = 127;
-        x++;
-        System.out.println(x);
+//       byte x = 127;
+//        x++;
+//        System.out.println( Byte.MAX_VALUE );
+
 
         // increment causes negative proper result but negative value;
     }
