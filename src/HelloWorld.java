@@ -52,12 +52,18 @@ public class HelloWorld {
 //        y *= x;
 //        System.out.println(y);
 
-    int x = 10;
-    int y = 2;
-//    x /= y;
-//    System.out.println( x );
- y -= x;
- System.out.println(y);
+//    int x = 10;
+//    int y = 2;
+////    x /= y;
+////    System.out.println( x );
+// y -= x;
+// System.out.println(y);
+// Error message: lossy conversion type not compatible
+       byte x = 127;
+        x++;
+        System.out.println(x);
+
+        // increment causes negative proper result but negative value;
     }
 
 }
