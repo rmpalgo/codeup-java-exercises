@@ -13,7 +13,7 @@ public class ConsoleExercises {
 
         Scanner newScan = new Scanner(System.in);
 //        System.out.printf("Line 1: %n");
-//        String word1 = newScan.nextLine();
+//        String word1 = newScan.next();
 //        System.out.printf("Line 2: %n");
 //        String word2 = newScan.nextLine();
 //        System.out.printf("Line 3: %n");
@@ -29,11 +29,13 @@ public class ConsoleExercises {
         // Calculate the perimeter and area of Codeup's classrooms
 
         System.out.print("Width: \n");
-        String width = newScan.nextLine();
+        float width = Float.parseFloat(newScan.nextLine());
         System.out.print("Length: \n");
-        String length = newScan.nextLine();
-        double area = (Float.parseFloat(width) * 2) + (Float.parseFloat(length) * 2);
+        float length = Float.parseFloat(newScan.nextLine());
+        float area = width * length;
+        float perimeter = (width * 2) + (length * 2);
         System.out.printf("Area: %f%n", area);
+        System.out.printf("Perimeter: %f%n", perimeter);
 
 
 
