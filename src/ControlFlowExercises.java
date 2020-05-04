@@ -80,12 +80,42 @@ public class ControlFlowExercises {
          */
 
         Scanner scan = new Scanner(System.in);
+        String answer = "";
+        do {
+            System.out.println("Enter a grade:");
+            int grade = scan.nextInt();
 
-        int grade = scan.nextInt();
+            if( grade > 0 && grade < 59 ) {
+                System.out.println("F");
+            } else if (grade > 59 && grade < 67 ){
+                if (grade >= 66) {
+                    System.out.println("D+");
+                } else {
+                    System.out.println("D");
+                }
+            } else if (grade > 66 && grade < 80 ){
+                if (grade >= 79) {
+                    System.out.println("C+");
+                } else {
+                    System.out.println("C");
+                }
+            } else if (grade > 79 && grade < 88 ){
+                if(grade >= 87) {
+                    System.out.println("B+")  ;
+                } else {
+                    System.out.println("B");
+                }
+            } else if (grade > 87 && grade < 101 ){
+                if( grade >= 98) {
+                    System.out.println("A+");
+                } else {
+                    System.out.println("A");
+                }
+            }
+            System.out.println("Would you like to enter a grade Y/N?");
+            answer = scan.next();
+        } while ( answer.equals("y") );
 
-        if( grade > 0 && grade < 59 ) {
-            System.out.print("F");
-        } else if ( grade > )
 
 
 
