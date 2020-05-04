@@ -8,10 +8,11 @@ public class ControlFlowExercises {
         /*
         int i = 5;
         while( i <= 15 ) {
-            System.out.printf("While loop iteration index: %s%n", i);
+            System.out.printf("%s ", i);
             i++;
         }
-        */
+         */
+
 
         //Do While
         /*
@@ -55,7 +56,7 @@ public class ControlFlowExercises {
 
         /*
         for (int i = 1; i <= 100; i++ ) {
-            if ( i % 3 == 0 && i % 5 == 0 ) {
+            if ( i % 15 == 0 ) {
                 System.out.println("FizzBuzz");
             } else if ( i % 3 == 0) {
                 System.out.println("Fizz");
@@ -67,55 +68,73 @@ public class ControlFlowExercises {
         }
          */
 
-        /*
-        Scanner scan = new Scanner(System.in);
-
-        int numberInput = scan.nextInt();
-
-        System.out.printf(" number | squared | cubed %n");
-        System.out.printf(" ------ | ------- | ----- %n");
-        for (int num = 1; num <= numberInput; num++) {
-            System.out.printf(" %s      | " + " %s       |" + "      %s%n ", num, num*num, num*num*num);
-        }
-         */
 
         Scanner scan = new Scanner(System.in);
-        String answer = "";
+
+        boolean userContinues = true;
+
         do {
-            System.out.println("Enter a grade:");
-            int grade = scan.nextInt();
-
-            if( grade > 0 && grade < 59 ) {
-                System.out.println("F");
-            } else if (grade > 59 && grade < 67 ){
-                if (grade >= 66) {
-                    System.out.println("D+");
-                } else {
-                    System.out.println("D");
+            System.out.println("What number would you like to go up to? ");
+            int numberInput = scan.nextInt();
+            System.out.println();
+            System.out.println("Here is your table!");
+            System.out.println();
+            System.out.println(" number | squared | cubed");
+            System.out.println(" ------ | ------- | ------");
+            for (int num = 1; num <= numberInput; num++) {
+                System.out.printf(" %-6s", num);
+                System.out.print(" | ");
+                System.out.printf(" %-6s", num*num);
+                System.out.print(" | ");
+                System.out.print(num*num*num);
+                System.out.println();
                 }
-            } else if (grade > 66 && grade < 80 ){
-                if (grade >= 79) {
-                    System.out.println("C+");
-                } else {
-                    System.out.println("C");
-                }
-            } else if (grade > 79 && grade < 88 ){
-                if(grade >= 87) {
-                    System.out.println("B+")  ;
-                } else {
-                    System.out.println("B");
-                }
-            } else if (grade > 87 && grade < 101 ){
-                if( grade >= 98) {
-                    System.out.println("A+");
-                } else {
-                    System.out.println("A");
-                }
+            System.out.print("Would you like to continue: y/n?");
+            String userResponse = scan.next();
+            if(!userResponse.equalsIgnoreCase("y")) {
+                userContinues = false;
             }
-            System.out.println("Would you like to enter a grade Y/N?");
-            answer = scan.next();
-        } while ( answer.equals("y") );
+        } while(userContinues);
 
+
+
+//        Scanner scan = new Scanner(System.in);
+//        String answer = "";
+//        do {
+//            System.out.println("Enter a grade:");
+//            int grade = scan.nextInt();
+//
+//            if( grade > 0 && grade < 59 ) {
+//                System.out.println("F");
+//            } else if (grade > 59 && grade < 67 ){
+//                if (grade >= 66) {
+//                    System.out.println("D+");
+//                } else {
+//                    System.out.println("D");
+//                }
+//            } else if (grade > 66 && grade < 80 ){
+//                if (grade >= 79) {
+//                    System.out.println("C+");
+//                } else {
+//                    System.out.println("C");
+//                }
+//            } else if (grade > 79 && grade < 88 ){
+//                if(grade >= 87) {
+//                    System.out.println("B+")  ;
+//                } else {
+//                    System.out.println("B");
+//                }
+//            } else if (grade > 87 && grade < 101 ){
+//                if( grade >= 98) {
+//                    System.out.println("A+");
+//                } else {
+//                    System.out.println("A");
+//                }
+//            }
+//            System.out.println("Would you like to enter a grade Y/N?");
+//            answer = scan.next();
+//        } while ( answer.equals("y") );
+//
 
 
 
