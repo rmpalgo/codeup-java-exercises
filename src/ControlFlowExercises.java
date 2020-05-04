@@ -27,6 +27,12 @@ public class ControlFlowExercises {
             counter = counter * counter;
         } while (counter < 1000000);
         */
+
+        for (int i = 5; i <= 15; i++) {
+            System.out.printf("%s%n", i);
+        }
+
+
     }
 
 }
