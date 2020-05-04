@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.Scanner;
 
 public class ControlFlowExercises {
 
@@ -52,6 +53,7 @@ public class ControlFlowExercises {
         }
          */
 
+        /*
         for (int i = 1; i <= 100; i++ ) {
             if ( i % 3 == 0 && i % 5 == 0 ) {
                 System.out.println("FizzBuzz");
@@ -63,6 +65,28 @@ public class ControlFlowExercises {
                 System.out.printf("%s%n", i);
             }
         }
+         */
+
+        /*
+        Scanner scan = new Scanner(System.in);
+
+        int numberInput = scan.nextInt();
+
+        System.out.printf(" number | squared | cubed %n");
+        System.out.printf(" ------ | ------- | ----- %n");
+        for (int num = 1; num <= numberInput; num++) {
+            System.out.printf(" %s      | " + " %s       |" + "      %s%n ", num, num*num, num*num*num);
+        }
+         */
+
+        Scanner scan = new Scanner(System.in);
+
+        int grade = scan.nextInt();
+
+        if( grade > 0 && grade < 59 ) {
+            System.out.print("F");
+        } else if ( grade > )
+
 
 
     }
