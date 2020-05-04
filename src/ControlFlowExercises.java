@@ -28,9 +28,29 @@ public class ControlFlowExercises {
         } while (counter < 1000000);
         */
 
+        /*
         for (int i = 5; i <= 15; i++) {
             System.out.printf("%s%n", i);
         }
+         */
+
+        /*
+        for (int i = 0; i <= 100; i+=2) {
+            System.out.printf("%s%n", i);
+        }
+         */
+
+        /*
+        for (int i = 100; i >= -10; i-=5) {
+            System.out.printf("%s%n", i);
+        }
+         */
+
+        /*
+        for( long i = 2; i < 1000000; i *= i) {
+            System.out.printf("%s%n", i);
+        }
+         */
 
 
     }
