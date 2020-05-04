@@ -11,11 +11,11 @@ public class ControlFlowExercises {
         */
 
         //Do While
-        int counter = 0;
+        int counter = 100;
         do {
             System.out.printf("Counting %s%n", counter);
-            counter +=2;
-        } while(counter <= 100);
+            counter -= 5;
+        } while(counter >= -10);
 
     }
 
