@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StringExercise {
 
     public static void main(String args[]) {
@@ -18,12 +20,23 @@ public class StringExercise {
         System.out.println(word);
          */
 
+        /*
         String word = "I can do backlashes \\, double backlashes \\\\, \n and the amazing triple backlashes \\\\\\";
         System.out.println(word);
+         */
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Ask BOB a question: ");
+        String question = scan.nextLine();
 
-
-
-
+        if(question.lastIndexOf("?") != -1) {
+            System.out.println("Sure.");
+        } else if (question.lastIndexOf("!") != -1) {
+            System.out.println("Whoa, chill out!");
+        } else if (question.equals("")) {
+            System.out.println("Fine. Be that Way!");
+        } else  {
+            System.out.println("Whatever.");
+        }
 
 
     }
