@@ -89,12 +89,20 @@ public static void askNumber() {
     Scanner myScanner = new Scanner(System.in);
     System.out.println(("Please enter a number between 1 and 10"));
     int input = myScanner.nextInt();
+    myScanner.nextLine();
     long fact = input;
 
     for(int i = 1; i < input; i++) {
         fact = fact * i;
     }
-    System.out.print(input + "! = " + fact);
+    System.out.println(input + "! = " + fact);
+    System.out.println("Do you want to continue? Y/N");
+    String userContinue = myScanner.next();
+    if(userContinue.equalsIgnoreCase("y")) {
+        askNumber();
+    } else {
+        System.out.println("Ok, goodbye!");
+    }
 }
 
 
