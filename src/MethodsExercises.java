@@ -12,50 +12,50 @@ public class MethodsExercises {
 //        System.out.println("multiplyLoop(10, 5) = " + multiplyLoop(10, 5));
 //        countdownRecursion(5);
 //        multiplyRecursion(5, 2);
-        validateInteger(1,10);
+        askNumber();
     }
 
-//    public static long add(long num1, long num2) {
-//        return num1 + num2;
-//    }
-//
-//    public static long subtract(long num1, long num2) {
-//        return num1 - num2;
-//    }
-//
-//    public static long multiply(long num1, long num2) {
-//        return num1 * num2;
-//    }
-//
-//    public static long divide(long num1, long num2) {
-//        return num1 / num2;
-//    }
-//
-//    public static long modulus(long num1, long num2) {
-//        return num1 % num2;
-//    }
-//
-//    public static long multiplyLoop(long num1, long num2) {
-//        long result = 0;
-//        for(long index = 0; index < num2; index++ ) {
-//            result += num1;
-//        }
-//        return result;
-//    }
-//
-//    public static void countdownRecursion(int n){
-//        System.out.println("recursion = " + n);
-//        // how to stop
-//        if(n < 1){
-//            return;
-//        }
-//        // how to proceed
-//        n = n - 1;
-//        // how to try again with new data
-//        countdownRecursion(n);
-//    }
+    public static long add(long num1, long num2) {
+        return num1 + num2;
+    }
 
-/*
+    public static long subtract(long num1, long num2) {
+        return num1 - num2;
+    }
+
+    public static long multiply(long num1, long num2) {
+        return num1 * num2;
+    }
+
+    public static long divide(long num1, long num2) {
+        return num1 / num2;
+    }
+
+    public static long modulus(long num1, long num2) {
+        return num1 % num2;
+    }
+
+    public static long multiplyLoop(long num1, long num2) {
+        long result = 0;
+        for(long index = 0; index < num2; index++ ) {
+            result += num1;
+        }
+        return result;
+    }
+
+    public static void countdownRecursion(int n){
+        System.out.println("recursion = " + n);
+        // how to stop
+        if(n < 1){
+            return;
+        }
+        // how to proceed
+        n = n - 1;
+        // how to try again with new data
+        countdownRecursion(n);
+    }
+
+
     public static void multiplyRecursion(long num1, long num2) {
 
         long result = 0;
@@ -70,7 +70,8 @@ public class MethodsExercises {
 
     }
 
- */
+
+
 
     public static int validateInteger(int min, int max) {
         Scanner myScanner = new Scanner(System.in).useDelimiter(" ");
@@ -82,6 +83,19 @@ public class MethodsExercises {
         System.out.println("Invalid, try again!");
         return validateInteger(1, 10);
     }
+
+
+public static void askNumber() {
+    Scanner myScanner = new Scanner(System.in);
+    System.out.println(("Please enter a number between 1 and 10"));
+    int input = myScanner.nextInt();
+    long fact = input;
+
+    for(int i = 1; i < input; i++) {
+        fact = fact * i;
+    }
+    System.out.print(input + "! = " + fact);
+}
 
 
 
