@@ -12,7 +12,8 @@ public class MethodsExercises {
 //        System.out.println("multiplyLoop(10, 5) = " + multiplyLoop(10, 5));
 //        countdownRecursion(5);
 //        multiplyRecursion(5, 2);
-        askNumber();
+//        askNumber();
+          rollDice();
     }
 
     public static long add(long num1, long num2) {
@@ -105,6 +106,26 @@ public static void askNumber() {
     }
 }
 
+public static void rollDice() {
+   int diceResult = 0;
+   Scanner myScanner = new Scanner(System.in);
+   System.out.println("How many sides does your dice have?");
+   int sides = myScanner.nextInt();
+   myScanner.nextLine();
+   System.out.println("Roll the Dice? Y/N");
+   String roll = myScanner.next();
+   myScanner.nextLine();
+   if(roll.equalsIgnoreCase("y")){
+        diceResult = new java.util.Random().nextInt(sides) + 1;
+   }
+   System.out.println("The dice with " + sides + " was rolled and the result is: " + diceResult);
+   System.out.println("Would you like to play again? Y/N");
+   String playAgain = myScanner.next();
+   if(playAgain.equalsIgnoreCase("y")) {
+       rollDice();
+   }
+    System.out.println(("Ok, goodbye!"));
+}
 
 
 
