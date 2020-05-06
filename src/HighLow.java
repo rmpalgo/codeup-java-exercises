@@ -27,7 +27,7 @@ public class HighLow {
         } else if(input < randomNumber) {
             System.out.println("HIGHER");
             highLow(randomNumber, guesses);
-        } else if(input == randomNumber) {
+        } else {
             System.out.println("GOOD GUESS");
         }
     }
