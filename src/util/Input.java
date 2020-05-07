@@ -23,15 +23,17 @@ public class Input {
         if(input >= min && input <= max) {
             return input;
         }
+        System.out.println("Invalid.");
         return getInt(min, max);
     }
 
-    public double getInt(double min, double max) {
+    public double getDouble(double min, double max) {
         double input = scanner.nextDouble();
         if(input >= min && input <= max) {
             return input;
         }
-        return getInt(min, max);
+        System.out.println("Invalid");
+        return getDouble(min, max);
     }
 
 }

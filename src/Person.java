@@ -39,12 +39,12 @@ public class Person {
 
     public String getName() {
         return this.name;
-    };
+    }
 
 
     public void setName(String name) {
         this.name = name;
-    };
+    }
 
     public void sayHello() {
         System.out.println("My name is :" + name);
