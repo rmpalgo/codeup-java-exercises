@@ -15,8 +15,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        String input = scanner.next();
-        return input.equalsIgnoreCase("y");
+        System.out.println(" Select Y/N?");
+        String input = scanner.nextLine();
+        return input.equalsIgnoreCase("y") ? true: false;
     }
 
     public int getInt(int min, int max) {
@@ -58,7 +59,8 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        System.out.println("Input: ");
+        return Double.parseDouble(scanner.nextLine());
     }
 
 }
