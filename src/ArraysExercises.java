@@ -14,6 +14,10 @@ public class ArraysExercises {
         personArray[1] = jackie;
         personArray[2] = jet;
 
+        for(Person person : personArray) {
+            System.out.println(person.getName());
+        }
+
 
     }
 
