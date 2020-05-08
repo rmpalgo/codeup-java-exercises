@@ -10,17 +10,17 @@ public class InputTest {
         System.out.println("wordTest = " + wordTest);
          */
 
-        /*
+/*
         System.out.println("booleanTest");
         boolean booleanTest = inputTest.yesNo();
         System.out.println("booleanTest = " + booleanTest);
-         */
+ */
 
-        /*
+
         System.out.println("integerTest");
         int integerTest = inputTest.getInt(1, 5);
         System.out.println("integerTest = " + integerTest);
-         */
+
 
         /*
         System.out.println("doubleTest");
@@ -34,7 +34,18 @@ public class InputTest {
         System.out.println("intTest = " + intTest);
          */
 
-        
+        /*
+        System.out.println("String test getInt");
+        int intStringTest = inputTest.getInt("5");
+        System.out.println("intStringTest = " + intStringTest);
+         */
+
+        /*
+        System.out.println("String test getInt min max");
+        int intStringTestMinMax = inputTest.getInt(1, 10, "3");
+        System.out.println("intStringTestMinMax = " + intStringTestMinMax);
+         */
+
 
     }
 }
