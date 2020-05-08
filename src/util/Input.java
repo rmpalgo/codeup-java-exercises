@@ -10,22 +10,24 @@ public class Input {
     }
 
     public String getString() {
+        System.out.println("Type: ");
         return scanner.nextLine();
     }
 
     public boolean yesNo() {
         String input = scanner.next();
-        return input.contains("yes");
+        return input.equalsIgnoreCase("y");
     }
 
-//    public int getInt(int min, int max) {
-//        int input = scanner.nextInt();
-//        if(input >= min && input <= max) {
-//            return input;
-//        }
-//        System.out.println("Invalid.");
-//        return getInt(min, max);
-//    }
+    public int getInt(int min, int max) {
+        System.out.println("Give me a number between: " + min + "and\t" + max);
+        int input = Integer.parseInt(scanner.nextLine());
+        if(input >= min && input <= max) {
+            return input;
+        }
+        System.out.println("Invalid.");
+        return getInt(min, max);
+    }
 
     public int getInt(int min, int max, String prompt) {
         System.out.println("String " + prompt);
