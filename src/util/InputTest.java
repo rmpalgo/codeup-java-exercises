@@ -28,5 +28,13 @@ public class InputTest {
         System.out.println("doubleTest = " + doubleTest);
          */
 
+        /*
+        System.out.println("getInt Test");
+        int intTest = inputTest.getInt();
+        System.out.println("intTest = " + intTest);
+         */
+
+        
+
     }
 }

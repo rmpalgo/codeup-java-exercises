@@ -27,6 +27,10 @@ public class Input {
         return getInt(min, max);
     }
 
+    public int getInt() {
+        return scanner.nextInt();
+    }
+
     public double getDouble(double min, double max) {
         double input = scanner.nextDouble();
         if(input >= min && input <= max) {
@@ -34,6 +38,10 @@ public class Input {
         }
         System.out.println("Invalid");
         return getDouble(min, max);
+    }
+
+    public double getDouble() {
+        return scanner.nextDouble();
     }
 
 }
