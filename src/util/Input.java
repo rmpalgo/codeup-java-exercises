@@ -18,17 +18,32 @@ public class Input {
         return input.contains("yes");
     }
 
-    public int getInt(int min, int max) {
-        int input = scanner.nextInt();
-        if(input >= min && input <= max) {
-            return input;
+//    public int getInt(int min, int max) {
+//        int input = scanner.nextInt();
+//        if(input >= min && input <= max) {
+//            return input;
+//        }
+//        System.out.println("Invalid.");
+//        return getInt(min, max);
+//    }
+
+    public int getInt(int min, int max, String prompt) {
+        System.out.println("String " + prompt);
+        System.out.println("Parsed " + Integer.parseInt(prompt));
+        if(Integer.parseInt(prompt) >= min && Integer.parseInt(prompt) <= max ) {
+            return Integer.parseInt(prompt);
         }
         System.out.println("Invalid.");
-        return getInt(min, max);
+        return getInt(min, max, prompt);
     }
 
     public int getInt() {
         return scanner.nextInt();
+    }
+
+    public int getInt(String x) {
+        System.out.println(x);
+        return Integer.parseInt(x);
     }
 
     public double getDouble(double min, double max) {

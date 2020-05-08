@@ -34,7 +34,16 @@ public class InputTest {
         System.out.println("intTest = " + intTest);
          */
 
-        
+        /*
+        System.out.println("String test getInt");
+        int intStringTest = inputTest.getInt("5");
+        System.out.println("intStringTest = " + intStringTest);
+         */
+
+        System.out.println("String test getInt min max");
+        int intStringTestMinMax = inputTest.getInt(1, 10, "3");
+        System.out.println("intStringTestMinMax = " + intStringTestMinMax);
+
 
     }
 }
