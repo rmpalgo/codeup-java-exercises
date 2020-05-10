@@ -4,19 +4,30 @@ import java.util.Scanner;
 
 public class SimpleGame {
 
-    int [] locationCells;
-    int numOfHits = 0;
+    private int [] locationCells;
+    private int numOfHits = 0;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         SimpleGame game = new SimpleGame();
-        int[] locations = {2,3,4};
+        int randomNum = (int) (Math.random() * 5);
+        int[] locations = {randomNum, randomNum + 1, randomNum + 2};
         game.setLocationCells(locations);
+        int numberOfGuesses = 0;
 
-        while(game.getNumOfHits() < 3) {
+        boolean isAlive = true;
+
+
+        while(isAlive) {
+            numberOfGuesses++;
             System.out.println("Guess location: ");
             String userGuess = input.nextLine();
             String result = game.checkYourself(userGuess);
+
+            if(result.equals("kill")) {
+                isAlive = false;
+                System.out.println("You took " + numberOfGuesses + " guesses");
+            }
         }
 
     }
