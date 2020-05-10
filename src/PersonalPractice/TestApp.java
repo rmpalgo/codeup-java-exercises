@@ -3,6 +3,7 @@ package PersonalPractice;
 public class TestApp {
 
     public static void main(String[] args) {
+        /*
         Dog d1 = new Dog("Milo", "Cattle Dog", 40);
         System.out.println(d1.getName());
         System.out.println(d1.getBreed());
@@ -39,6 +40,23 @@ public class TestApp {
         System.out.println(nums[0]);
         System.out.println(words[0]);
         System.out.println(truths[0]);
+         */
+
+        Dog dog1 = new Dog("Milo", "ACD", 40);
+        dog1.bark();
+
+        Dog[] myDogs = new Dog[3];
+        myDogs[0] = new Dog("Milo", "ACD", 40);
+        myDogs[1] = new Dog("Mia", "Lab", 60);
+        myDogs[2] = new Dog("Lucy", "Arctic Fox", 50);
+
+        System.out.print("The last dog's name is ");
+        System.out.println(myDogs[2].getName());
+        int x = 0;
+        while(x < myDogs.length) {
+            myDogs[x].bark();
+            x++;
+        }
 
 
     }
