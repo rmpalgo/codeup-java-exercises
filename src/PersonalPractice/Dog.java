@@ -6,6 +6,24 @@ public class Dog {
     String breed;
     String name;
 
+    public Dog(String name, String breed, int size) {
+        this.name = name;
+        this.breed = breed;
+        this.size = size;
+    }
+
+    public int getSize () {
+        return this.size;
+    }
+
+    public String getBreed() {
+        return this.breed;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
     void bark() {
         System.out.println("Bark! Bark!");
     }
