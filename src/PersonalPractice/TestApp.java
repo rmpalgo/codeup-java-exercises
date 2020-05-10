@@ -48,7 +48,7 @@ public class TestApp {
         Dog[] myDogs = new Dog[3];
         myDogs[0] = new Dog("Milo", "ACD", 40);
         myDogs[1] = new Dog("Mia", "Lab", 60);
-        myDogs[2] = new Dog("Lucy", "Arctic Fox", 50);
+        myDogs[2] = new Dog("Lucy", "Polar Bear Ferret", 50);
 
         System.out.print("The last dog's name is ");
         System.out.println(myDogs[2].getName());
@@ -57,6 +57,15 @@ public class TestApp {
             myDogs[x].bark();
             x++;
         }
+        int i = 0;
+        while(i < myDogs.length) {
+            String name = myDogs[i].getName();
+            String breed = myDogs[i].getBreed();
+            System.out.println((name + " " + breed));
+            i++;
+        }
+
+
 
 
     }
