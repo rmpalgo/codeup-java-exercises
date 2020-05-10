@@ -47,11 +47,14 @@ public class TestApp {
         dog1.bark();
          */
 
+        /*
         Dog[] myDogs = new Dog[4];
         myDogs[0] = new Dog("Milo", "ACD", 40);
         myDogs[1] = new Dog("Mia", "Lab", 60);
         myDogs[2] = new Dog("Lucy", "Polar Bear Ferret", 50);
         myDogs[3] = new Dog("Cinnamon", "Chihuahua", 6);
+
+         */
 
 /*
         System.out.print("The last dog's name is ");
@@ -70,14 +73,16 @@ public class TestApp {
         }
  */
 
+        /*
         int x = 0;
         while(x < myDogs.length) {
             myDogs[x].bark();
             x++;
         }
+         */
 
-
-
+        ElectricGuitar guitar = new ElectricGuitar("Guitar Brand", 5, true);
+        System.out.println("guitar.getRockStarUsesIt() = " + guitar.getRockStarUsesIt());
 
 
     }
