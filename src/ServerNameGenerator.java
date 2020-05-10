@@ -3,19 +3,19 @@ import java.util.Scanner;
 public class ServerNameGenerator {
     private static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println("Enter a server name: ");
-        String userInput = input.nextLine();
-        System.out.println("randomWord(userInput) = " + randomWord(userInput));
+        System.out.println("Server Name: ");
+        System.out.println(randomWord());
+
 
     }
 
+    private static String[] stringAdj = {"cool", "bellicose", "calamitous", "sagacious", "tenacious", "omnipotent", "factotum", "ubiquitous", "obtuse", "spasmodic"};
+    private static String[] stringNoun = {"deny", "profound", "scan", "round", "employ", "measure", "chauvinist", "lodge", "restaurant", "preach"};
 
-
-    private static String[] stringArr = {"cool", "bellicose", "calamitous", "sagacious", "tenacious", "omnipotent", "factotum", "ubiquitous", "obtuse", "spasmodic"};
-
-    public static String randomWord(String input) {
-        int randomIndex = new java.util.Random().nextInt(stringArr.length);
-        return input + "-" + stringArr[randomIndex];
+    public static String randomWord() {
+        int randomIndex1 = new java.util.Random().nextInt(stringAdj.length);
+        int randomIndex2 = new java.util.Random().nextInt(stringNoun.length);
+        return stringNoun[randomIndex1] + "-" + stringAdj[randomIndex2];
     }
 
 }
