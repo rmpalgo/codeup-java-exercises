@@ -1,57 +1,34 @@
 public class Person {
 
-    private String name;
+    public static String race = "HUMAN RACE";
 
-    public static void main(String[] args){
-//        Person ron = new Person("Ron");
-//        System.out.println("ron.getName() = " + ron.getName());
-//        ron.setName("RonPalencia");
-//        ron.sayHello();
+    // Creating fields
+    private String firstName;
+    protected boolean isAlive;
+    private String lastName;
 
-/*
-        Person person1 = new Person("John");
-        Person person2 = new Person("John");
-        System.out.println(person1.getName().equals(person2.getName()));
-        System.out.println(person1.toString());
-        System.out.println(person2.toString());
-        System.out.println(person1 == person2);
- */
-
-
-        /*
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1 == person2);
-         */
-
-         /*
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
-        person2.setName("Jane");
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
-        */
-
+    // Creating rules in order to create an instance
+    // Everybody should have a First Name, Last Name and a value to know if they are alive
+    public Person(String fn, String ln, boolean isAlive){
+        this.firstName = fn;
+        this.lastName = ln;
+        this.isAlive = isAlive;
     }
 
-    public Person(String name) {
-        this.setName(name);
+    public String sayHello(){
+        if(this.isAlive){
+            return String.format("Hello from %s %s!", this.firstName, this.lastName);
+        } else {
+            return "This person is not alive anymore :(";
+        }
     }
 
-    public String getName() {
-        return this.name;
+    public String getFirstName() {
+        return this.firstName;
     }
 
-
-    public void setName(String name) {
-        this.name = name;
+    public String getLastName() {
+        return this.lastName;
     }
-
-    public void sayHello() {
-        System.out.println("My name is : " + this.getName());
-    }
-
 
 }
