@@ -34,6 +34,15 @@ public class MoviesApplication {
         return input.getInt(0, 5);
     }
 
+    public static void viewMoviesByCategory(String category) {
+        for(Movie movie : MoviesArray.findAll()) {
+            if(movie.getCategory().equalsIgnoreCase(category)) {
+                //Dispay the movie.
+                System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+            }
+        }
+    }
+
     private static boolean executeUserChoice(int choice) {
         boolean continueRunningApp = true;
 
@@ -46,6 +55,26 @@ public class MoviesApplication {
                 for(Movie movie: MoviesArray.findAll()) {
                     System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
                 }
+                System.out.println("\n");
+                break;
+            case 2: //animated
+                System.out.println("\n");
+                viewMoviesByCategory("animated");
+                System.out.println("\n");
+                break;
+            case 3: //drama
+                System.out.println("\n");
+                viewMoviesByCategory("drama");
+                System.out.println("\n");
+                break;
+            case 4: //horror
+                System.out.println("\n");
+                viewMoviesByCategory("horror");
+                System.out.println("\n");
+                break;
+            case 5: //scifi
+                System.out.println("\n");
+                viewMoviesByCategory("scifi");
                 System.out.println("\n");
                 break;
         }
