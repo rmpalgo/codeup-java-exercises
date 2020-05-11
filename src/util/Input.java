@@ -21,7 +21,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Give me a number between: " + min + "and\t" + max);
+        System.out.println("Give me a number between: " + min + " and\t" + max);
         int input = Integer.parseInt(scanner.nextLine());
         if(input >= min && input <= max) {
             return input;

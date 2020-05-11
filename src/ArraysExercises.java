@@ -13,11 +13,17 @@ public class ArraysExercises {
         personArray[1] = jackie;
         personArray[2] = jet;
 
+        for(int i = 0; i < people.length; i++){
+            people[i].sayHello();
+        }
+
+        personArray = addPerson(people, "Mia");
+
         for(Person person : personArray) {
             System.out.println(person.getName());
         }
 
-        System.out.println("addPerson(people, \"Mia\") = " + addPerson(people, "Mia"));
+//        System.out.println("addPerson(people, \"Mia\") = " + Arrays.toString(addPerson(people, "Mia")));
 
     }
     private static Person person1 = new Person("ron");
@@ -29,11 +35,11 @@ public class ArraysExercises {
 
 
 
-    public static  String addPerson( Person [] people, String person ) {
-        int newLength = people.length;
-        Person[] addedArray = Arrays.copyOf(people, newLength + 1);
-        addedArray[newLength] = new Person (person);
-        return Arrays.toString(addedArray);
+    public static Person[] addPerson( Person [] people, String person ) {
+//        Person[] newPeopleArray = new Person[people.length + 1];
+        Person[] addedArray = Arrays.copyOf(people, people.length + 1);
+        addedArray[addedArray.length - 1] = new Person (person);
+        return addedArray;
     }
 
 
