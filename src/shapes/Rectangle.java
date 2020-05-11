@@ -4,9 +4,9 @@ public class Rectangle {
     protected int length;
     protected int width;
 
-    public Rectangle(int aLength, int aWidth) {
-        this.length = aLength;
+    public Rectangle(int aWidth, int aLength) {
         this.width = aWidth;
+        this.length = aLength;
     }
 
     public int getArea() {
