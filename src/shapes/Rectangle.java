@@ -21,28 +21,14 @@ public class Rectangle extends Quadrilateral implements Measurable {
     @Override
     public double getPerimeter() {
         System.out.println("getting Perimeter from the Rectangle Class: ");
-        return 0;
+        return (2 * super.length) + (2 * super.width);
     }
 
     @Override
     public double getArea() {
         System.out.println("getting Area from the Rectangle Class: ");
-        return 0;
+        return super.length * super.width;
     }
-//    protected int length;
-//    protected int width;
-//
-//    public Rectangle(int aWidth, int aLength) {
-//        this.width = aWidth;
-//        this.length = aLength;
-//    }
-//
-//    public int getArea() {
-//        return this.length * this.width;
-//    }
-//
-//    public int getPerimeter() {
-//        return (2 * this.length) + (2 * this.width);
-//    }
+
 
 }
