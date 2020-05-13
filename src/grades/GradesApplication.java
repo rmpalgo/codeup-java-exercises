@@ -38,7 +38,26 @@ public class GradesApplication {
         System.out.println(output);
         System.out.println("What student would you like to see more information on?");
         String input = scanner.nextLine();
-        System.out.println(students.get(input).getName());
+        String yesOrNo = "y";
+        String choice;
+
+        while(yesOrNo.equalsIgnoreCase("y")) {
+            if(!students.containsKey(input)) {
+                System.out.println("Sorry, no student found with the GitHub username of " + input);
+            }
+            System.out.println(students.get(input).getName());
+            System.out.println("Would you like to see another student?");
+            choice = scanner.nextLine();
+            if(choice.equalsIgnoreCase("y")) {
+                System.out.println("What student would you like to see more information on?");
+                yesOrNo = "y";
+                input = scanner.nextLine();
+            } else if(choice.equalsIgnoreCase("n")) {
+                System.out.println("Goodbye, and have a wonderful day!");
+                yesOrNo = "n";
+            }
+        }
+
     }
 
 }
