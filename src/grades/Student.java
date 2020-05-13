@@ -12,4 +12,14 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void addGrade(int grade) {
+        grades.add(grade);
+    }
+
+
+
 }
