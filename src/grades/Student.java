@@ -28,4 +28,16 @@ public class Student {
         return total/grades.size();
     }
 
+    public static void main(String[] args) {
+        Student ron = new Student("Ron");
+        System.out.print(ron.getName());
+        ron.addGrade(70);
+        ron.addGrade(74);
+        ron.addGrade(82);
+        ron.addGrade(92);
+        ron.addGrade(93);
+        ron.addGrade(99);
+        System.out.println("ron.getGradeAverage() = " + ron.getGradeAverage());
+    }
+
 }
