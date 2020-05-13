@@ -2,22 +2,22 @@ package shapes;
 
 public class Rectangle extends Quadrilateral implements Measurable {
 
-    public Rectangle(int aLength, int aWidth) {
+    public Rectangle(double aLength, double aWidth) {
         super(aLength, aWidth);
     }
 
 
     @Override
-    void setLength(int aLength) {
+    void setLength(double aLength) {
         System.out.println("setting length from the Rectangle Class: ");
-        super.length = aLength;
+        this.length = aLength;
 
     }
 
     @Override
-    void setWidth(int aWidth) {
+    void setWidth(double aWidth) {
         System.out.println("setting width from the Rectangle Class: ");
-        super.width = aWidth;
+        this.width = aWidth;
     }
 
     @Override
@@ -25,13 +25,13 @@ public class Rectangle extends Quadrilateral implements Measurable {
         //if you don't write any body here the code will fail because it's part of
         // interface and is required
         System.out.println("getting Perimeter from the Rectangle Class: ");
-        return (2 * super.length) + (2 * super.width);
+        return (2 * this.length) + (2 * this.width);
     }
 
     @Override
     public double getArea() {
         System.out.println("getting Area from the Rectangle Class: ");
-        return super.length * super.width;
+        return this.length * this.width;
     }
 
 
