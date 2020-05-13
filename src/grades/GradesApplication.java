@@ -35,18 +35,10 @@ public class GradesApplication {
 
         String output = "Welcome!\n\n Here are the Github usernames of our students: \n\n" +
                 "|scoobyMachineCode| |shaggyCSS| |fredJS| |velmaJava|\n\n What student would you like to see more information on?";
-
-        while(true) {
-            System.out.println(output);
-            if(yesOrNo.equalsIgnoreCase("yes")) {
-                System.out.println("What student would you like to see more information on?");
-                String  input = scanner.nextLine();
-                System.out.println(students.get(input));
-            }
-                System.out.println("Goodbye, and have a wonderful day!");
-
-
-        }
+        System.out.println(output);
+        System.out.println("What student would you like to see more information on?");
+        String input = scanner.nextLine();
+        System.out.println(students.get(input).getName());
     }
 
 }
