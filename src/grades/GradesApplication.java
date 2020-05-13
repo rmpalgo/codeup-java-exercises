@@ -20,6 +20,12 @@ public class GradesApplication {
         velma.addGrade(96);
         velma.addGrade(99);
         velma.addGrade(100);
+
+        students.put("shaggyCSS", shaggy);
+        students.put("fredJS", fred);
+        students.put("velmaJava", velma);
+
+
     }
 
 }
