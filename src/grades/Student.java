@@ -20,6 +20,12 @@ public class Student {
         grades.add(grade);
     }
 
-
+    public double getGradeAverage() {
+        double total = 0;
+        for(Integer grade: grades) {
+            total += grade;
+        }
+        return total/grades.size();
+    }
 
 }
