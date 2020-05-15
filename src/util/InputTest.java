@@ -17,9 +17,9 @@ public class InputTest {
  */
 
 
-        System.out.println("integerTest");
-        int integerTest = inputTest.getInt(1, 5);
-        System.out.println("integerTest = " + integerTest);
+//        System.out.println("integerTest");
+//        int integerTest = inputTest.getInt(1, 5);
+//        System.out.println("integerTest = " + integerTest);
 
 
         /*

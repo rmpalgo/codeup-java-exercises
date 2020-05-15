@@ -58,7 +58,7 @@ public class Input {
                 return Double.valueOf(input);
             }
         } catch(NumberFormatException e) {
-            System.out.println("Invalid String");
+            System.out.println("Invalid input.");
             return getDouble(min, max);
         }
         return Double.valueOf(input);
