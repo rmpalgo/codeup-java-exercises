@@ -10,7 +10,11 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("Type: ");
+        return this.getString("Type something: ");
+    }
+
+    public String getString(String prompt) {
+        System.out.println(prompt);
         return scanner.nextLine();
     }
 
@@ -22,11 +26,17 @@ public class Input {
 
     public int getInt(int min, int max) {
         System.out.println("Give me a number between: " + min + " and\t" + max);
-        int input = Integer.parseInt(scanner.nextLine());
+        int input;
+        try {
+            input = Integer.parseInt(this.getString());
+        } catch(NumberFormatException e) {
+            System.out.println("This string input is invalid.");
+            return getInt(min, max);
+        }
         if(input >= min && input <= max) {
             return input;
         }
-        System.out.println("Invalid.");
+        System.out.println("Invalid. Out of range.");
         return getInt(min, max);
     }
 
@@ -77,6 +87,17 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Input: ");
+        String input = getString();
+        try{
+            return Double.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+            return getDouble();
+        }
+    }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
         String input = getString();
         try{
             return Double.valueOf(input);
