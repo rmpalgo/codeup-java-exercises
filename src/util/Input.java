@@ -66,7 +66,13 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Input: ");
-        return Double.parseDouble(scanner.nextLine());
+        String input = getString();
+        try{
+            return Double.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+            return getDouble();
+        }
     }
 
 }
