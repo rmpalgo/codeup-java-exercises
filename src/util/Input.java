@@ -49,13 +49,19 @@ public class Input {
         return Integer.parseInt(x);
     }
 
-    public double getDouble(double min, double max) {
-        double input = scanner.nextDouble();
-        if(input >= min && input <= max) {
-            return input;
+    public double getDouble(double min, double max){
+        System.out.println("Give me a number between: " + min + " and\t" + max);
+        String input;
+        try {
+            input = getString();
+            if(Double.parseDouble(input) >= min && Double.parseDouble(input) <= max) {
+                return Double.valueOf(input);
+            }
+        } catch(NumberFormatException e) {
+            System.out.println("Invalid String");
+            return getDouble(min, max);
         }
-        System.out.println("Invalid");
-        return getDouble(min, max);
+        return Double.valueOf(input);
     }
 
     public double getDouble() {

@@ -45,7 +45,7 @@ public class InputTest {
         int intStringTestMinMax = inputTest.getInt(1, 10, "3");
         System.out.println("intStringTestMinMax = " + intStringTestMinMax);
          */
-
+        inputTest.getDouble(1, 5);
 
     }
 }
