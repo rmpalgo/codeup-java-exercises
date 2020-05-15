@@ -41,12 +41,23 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        String input = getString();
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+            return getInt();
+        }
     }
 
     public int getInt(String x) {
-        System.out.println(x);
-        return Integer.parseInt(x);
+        System.out.println("input: " + x);
+        try {
+            return Integer.valueOf(x);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max){

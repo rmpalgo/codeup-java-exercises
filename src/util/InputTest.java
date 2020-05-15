@@ -46,7 +46,8 @@ public class InputTest {
         System.out.println("intStringTestMinMax = " + intStringTestMinMax);
          */
        // inputTest.getDouble(1, 5);
-        System.out.println(inputTest.getDouble());
+        //System.out.println(inputTest.getDouble());
+        System.out.println(inputTest.getInt("wsf"));
 
     }
 }
