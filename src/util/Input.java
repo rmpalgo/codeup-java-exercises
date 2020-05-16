@@ -107,5 +107,27 @@ public class Input {
         }
     }
 
+    public int getBinary() {
+        String binary = getString();
+        try{
+            return Integer.valueOf(binary, 2);
+        } catch(NumberFormatException e) {
+            System.out.println("Input invalid.");
+            return getBinary();
+        }
+    }
+
+    public int getHex(){
+        String hex = getString();
+        try {
+            return Integer.valueOf(hex, 16);
+        } catch (NumberFormatException e) {
+            System.out.println("Input invalid.");
+            return getHex();
+        }
+    }
+
+
+
 }
 
