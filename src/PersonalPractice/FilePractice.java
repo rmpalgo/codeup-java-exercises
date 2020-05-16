@@ -9,27 +9,21 @@ import java.util.Formatter;
 
 public class FilePractice {
 
-    public static void main(String[] args) {
+    private Formatter x;
 
-    String directory = "src/PersonalPractice/data";
-    String filename = "info.txt";
-
-    Path dataDirectory = Paths.get(directory);
-    System.out.println("dataDirectory = " + dataDirectory);
-    createDir(dataDirectory);
-
-    }
-
-    public static void createDir(Path aDir) {
-        if(Files.notExists(aDir)) {
-            try {
-                Files.createDirectory(aDir);
-                System.out.println("You just created a file.");
-            } catch (IOException e) {
-                System.out.println("There was an error.");
-                e.printStackTrace();
-            }
+    public void openFile() {
+        try{
+            x = new Formatter("src/PersonalPractice/cool.txt");
+        } catch (Exception e) {
+            System.out.println("you have an error");
         }
     }
 
+    public void addRecords() {
+        x.format("%s %s%s", "20", "Mr.", "Wanderer");
+    }
+
+    public void closeFile() {
+        x.close();
+    }
 }
