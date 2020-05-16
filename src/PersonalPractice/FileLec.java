@@ -52,7 +52,31 @@ public class FileLec {
         readFile(numbersFilePath, false);
         readFile(groceryFilePath, true);
 
+        //replace item by creating a copyArrayList and then using writeFile method to overwrite the file
+        List<String> modifiedGrocery = replaceItem(groceryFilePath, "milk", "cream");
+        writeFile(groceryFilePath, modifiedGrocery);
+        readFile(groceryFilePath, true);
 
+    }
+
+    private static List<String> replaceItem(Path aFile, String find, String replacement) {
+        List<String> tempList = new ArrayList<>();
+
+        try {
+            List<String> lines = Files.readAllLines(aFile);
+            for(String line: lines) {
+                if(line.equals(find)) {
+                    tempList.add(replacement);
+                    continue;
+                }
+                tempList.add(line);
+            }
+        } catch (IOException e) {
+            System.out.println("There is an error.");
+            e.printStackTrace();
+        }
+        System.out.println("Overwritten the file.");
+        return tempList;
     }
 
     public static void createDir(Path aDir) {
