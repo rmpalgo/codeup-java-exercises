@@ -17,9 +17,9 @@ public class InputTest {
  */
 
 
-        System.out.println("integerTest");
-        int integerTest = inputTest.getInt(1, 5);
-        System.out.println("integerTest = " + integerTest);
+//        System.out.println("integerTest");
+//        int integerTest = inputTest.getInt(1, 5);
+//        System.out.println("integerTest = " + integerTest);
 
 
         /*
@@ -45,7 +45,10 @@ public class InputTest {
         int intStringTestMinMax = inputTest.getInt(1, 10, "3");
         System.out.println("intStringTestMinMax = " + intStringTestMinMax);
          */
-
+       // inputTest.getDouble(1, 5);
+        //System.out.println(inputTest.getDouble());
+       // System.out.println(inputTest.getInt("wsf"));
+        System.out.println(inputTest.getInt(1, 5));
 
     }
 }
