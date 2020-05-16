@@ -57,6 +57,22 @@ public class FileLec {
         writeFile(groceryFilePath, modifiedGrocery);
         readFile(groceryFilePath, true);
 
+        //fileContains method takes in a String needle string to find and second param
+        //Path aFile and use readFile method with false print, then iterate through lines
+        //to find the String needle, and return true otherwise false
+        System.out.println("fileContains(\"cheese\", groceryFilePath) = " + fileContains("cheese", groceryFilePath));
+        System.out.println("fileContains(\"grapes\", groceryFilePath) = " + fileContains("grapes", groceryFilePath));
+
+    }
+
+    private static boolean fileContains(String needle, Path aFile) {
+        List<String> lines = readFile(aFile, false);
+        for(String line: lines) {
+            if(line.equals(needle)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static List<String> replaceItem(Path aFile, String find, String replacement) {
