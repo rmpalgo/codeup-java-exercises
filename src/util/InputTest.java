@@ -48,7 +48,10 @@ public class InputTest {
        // inputTest.getDouble(1, 5);
         //System.out.println(inputTest.getDouble());
        // System.out.println(inputTest.getInt("wsf"));
-        System.out.println(inputTest.getInt(1, 5));
+        //System.out.println(inputTest.getInt(1, 5));
+
+        //System.out.println(inputTest.getBinary());
+       //System.out.println(inputTest.getHex());
 
     }
 }
