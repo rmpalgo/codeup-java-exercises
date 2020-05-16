@@ -48,8 +48,9 @@ public class FileLec {
         writeFile(numbersFilePath, numberList);
         writeFile(groceryFilePath, groceryList);
 
-        //
-
+        //read files pass filePath as first param, and boolean to print system output lines instead of just return lines
+        readFile(numbersFilePath, false);
+        readFile(groceryFilePath, true);
 
 
     }
@@ -87,6 +88,24 @@ public class FileLec {
         } catch(IOException e) {
             System.out.println("Problems writing in file");
             e.printStackTrace();
+        }
+    }
+
+    public static List<String> readFile(Path aFile, boolean print) {
+        List<String> lines;
+        try {
+            lines = Files.readAllLines(aFile);
+            if(print == true) {
+                for (String line : lines) {
+                    System.out.println("line = " + line);
+                }
+                return null;
+            }
+            return lines;
+        } catch(IOException e) {
+            System.out.println("Problems reading the file");
+            e.printStackTrace();
+            return null;
         }
     }
 
