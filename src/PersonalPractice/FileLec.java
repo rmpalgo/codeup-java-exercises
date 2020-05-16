@@ -11,12 +11,19 @@ import java.util.List;
 public class FileLec {
 
     public static void main(String[] args) {
+
+        //directory name and location
         String directory = "src/PersonalPractice/data";
+
+        //file names
         String filename = "info.txt";
         String secondName = "grocery-list.csv";
+
+        //data to write into the files
         List<String> groceryList = new ArrayList<>();
         List<String> numberList = Arrays.asList("1", "2", "3", "4", "5", "8", "90");
 
+        //adding the data to the ArrayList grocery
         groceryList.add("coffee");
         groceryList.add("milk");
         groceryList.add("sugar");
@@ -24,12 +31,20 @@ public class FileLec {
         groceryList.add("eggs");
         groceryList.add("tomatoes");
 
-        //where the folder is gonna live
+        //where the directory will be and where the file and in which directory
         Path dataDirectory = Paths.get(directory);
         Path numbersFilePath = Paths.get(directory, filename);
         Path groceryFilePath = Paths.get(directory, secondName);
 
+        //methods of creating a directory
         createDir(dataDirectory);
+
+        //using methods that check if file exists, then create the file
+        createAndCheckFile(numbersFilePath);
+        createAndCheckFile(groceryFilePath);
+
+        //write data on the file itself, two param: path to the file and the list of data
+        writeFile(numbersFilePath, numberList);
 
 
 
@@ -45,7 +60,27 @@ public class FileLec {
                 e.printStackTrace();
             }
         }
+    }
 
+    public static void createAndCheckFile(Path aFile) {
+        if(Files.notExists(aFile)) {
+            try {
+                System.out.println("File created.");
+                Files.createFile(aFile);
+            } catch(IOException e) {
+                System.out.println("Problems creating a file.");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void writeFile (Path aFile, List<String> aList ) {
+        try{
+            Files.write(aFile, aList);
+        } catch(IOException e) {
+            System.out.println("Problems writing in file");
+            e.printStackTrace();
+        }
     }
 
 }
