@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +22,7 @@ public class FileLec {
 
         //data to write into the files
         List<String> groceryList = new ArrayList<>();
-        List<String> numberList = Arrays.asList("1", "2", "3", "4", "5", "8", "90");
+        List<String> numberList = Arrays.asList("1", "2", "3", "4", "5", "8", "90", "101");
 
         //adding the data to the ArrayList grocery
         groceryList.add("coffee");
@@ -45,6 +46,9 @@ public class FileLec {
 
         //write data on the file itself, two param: path to the file and the list of data
         writeFile(numbersFilePath, numberList);
+        writeFile(groceryFilePath, groceryList);
+
+        //
 
 
 
@@ -76,7 +80,10 @@ public class FileLec {
 
     public static void writeFile (Path aFile, List<String> aList ) {
         try{
+            System.out.println("Data written.");
             Files.write(aFile, aList);
+            //This will append to the file instead of rewriting it
+            //Files.write(aFile, aList, StandardOpenOption.APPEND);
         } catch(IOException e) {
             System.out.println("Problems writing in file");
             e.printStackTrace();
